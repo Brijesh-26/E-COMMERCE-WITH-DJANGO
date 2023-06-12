@@ -118,8 +118,8 @@ USE_TZ = True
 # setting emails
 
 EMAIL_HOST= 'smtpout.secureserver.net'
-EMAIL_HOST_USER= '2020021050@mmmut.ac.in'
-EMAIL_HOST_PASSWORD= 'Verma@123'
+EMAIL_HOST_USER= ''
+EMAIL_HOST_PASSWORD= ''
 EMAIL_PORT= 587
 EMAIL_USE_TLS= True
 EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'

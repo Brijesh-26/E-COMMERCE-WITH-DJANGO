@@ -29,8 +29,9 @@ def signup(request):
         except Exception as identifier:
             pass
         user = User.objects.create_user(email,email,password)
-        user.is_active=False
+        
         user.save()
+        user.is_active=False
         email_subject="Activate Your Account"
         message=render_to_string('activate.html',{
             'user':user,
@@ -55,8 +56,9 @@ class ActivateAccountView(View):
         except Exception as identifier:
             user=None
         if user is not None and generate_token.check_token(user,token):
-            user.is_active=True
+            
             user.save()
+            user.is_active=True
             messages.info(request,"Account Activated Successfully")
             return redirect('/authentication/login')
         return render(request,'activatefail.html')
@@ -71,7 +73,7 @@ def handlelogin(request):
 
         if myuser is not None:
             login(request,myuser)
-            messages.success(request,"Login Success")
+            messages.success(request,"Login Success")            
             return redirect('/')
 
         else:

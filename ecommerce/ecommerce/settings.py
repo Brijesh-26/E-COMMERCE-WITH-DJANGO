@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)_jav)pnrcpyo^i=b-@eg#fcb_hych!-gx5xe0$w(#hw^708ho'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -139,9 +139,6 @@ STATICFILES_DIRS= [
     
     os.path.join(BASE_DIR, 'static')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 

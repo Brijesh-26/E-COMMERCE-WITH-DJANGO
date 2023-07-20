@@ -19,6 +19,19 @@
     {% csrf_token %}
     <br />
 
+
+    <label for="text">Username</label>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control p-2"
+        id="email"
+        name="username"
+        required
+      />
+    </div>
+
+
     <label for="email">Email</label>
     <div class="form-group">
       <input
@@ -35,25 +48,16 @@
         type="password"
         class="form-control p-2"
         id="pass1"
-        name="pass1"
+        name="password"
         required
       />
     </div>
-    <label for="pass2">Confirm Password</label>
-    <div class="form-group">
-      <input
-        type="password"
-        class="form-control p-2"
-        id="pass2"
-        name="pass2"
-        required
-      />
-    </div>
+    
     <br />
     <button type="submit" class="btn btn-dark">SignIn</button>
 
     <br />
-    Already User? <a href="/authentication/login/">Login</a>
+    Already User? <a href="/authentication/accounts/login/">Login</a>
     <br />
   </form>
 </div>

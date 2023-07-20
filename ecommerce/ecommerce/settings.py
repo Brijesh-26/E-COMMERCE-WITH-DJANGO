@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)_jav)pnrcpyo^i=b-@eg#fcb_hych!-gx5xe0$w(#hw^708ho'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -119,12 +119,7 @@ USE_TZ = True
 
 # setting emails
 
-EMAIL_HOST= 'smtpout.secureserver.net'
-EMAIL_HOST_USER= '20200021050@mmmut.ac.in'
-EMAIL_HOST_PASSWORD= 'Verma@123'
-EMAIL_PORT= 587
-EMAIL_USE_TLS= True
-EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
+
 
 
 # Static files (CSS, JavaScript, Images)
@@ -140,8 +135,6 @@ STATICFILES_DIRS= [
     os.path.join(BASE_DIR, 'static')
 ]
 
-
-
 MEDIA_URL= '/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
 
@@ -149,3 +142,11 @@ MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_HOST= 'smtpout.secureserver.net'
+EMAIL_HOST_USER= 'djangowork97@gmail.com'
+EMAIL_HOST_PASSWORD= 'qcntouxmmitgjdyu'
+EMAIL_PORT= 587
+EMAIL_USE_TLS= True
+EMAIL_BACKEND= 'django.core.mail.backends.smtp.EmailBackend'
